@@ -1,0 +1,30 @@
+services:
+  mongo1:
+    build: .
+    image: mongo-genkey:6.0
+    container_name: mongo1
+    ports:
+      - "27017:27017"
+    command: ["--replSet","rs0","--bind_ip_all"]
+    volumes:
+      - ./mongo1_data:/data/db
+
+  mongo2:
+    build: .
+    image: mongo-genkey:6.0
+    container_name: mongo2
+    ports:
+      - "27018:27017"
+    command: ["--replSet","rs0","--bind_ip_all"]
+    volumes:
+      - ./mongo2_data:/data/db
+
+  mongo3:
+    build: .
+    image: mongo-genkey:6.0
+    container_name: mongo3
+    ports:
+      - "27019:27017"
+    command: ["--replSet","rs0","--bind_ip_all"]
+    volumes:
+      - ./mongo3_data:/data/db
