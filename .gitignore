@@ -1,1 +1,25 @@
+# Datos y datasets
 /data/
+
+# Entorno virtual de Python
+/env/
+
+# Datos de MongoDB (contenedores)
+/Contenedores/mongo1_data/
+/Contenedores/mongo2_data/
+/Contenedores/mongo3_data/
+
+# Archivos temporales y logs
+*.log
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
